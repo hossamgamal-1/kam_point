@@ -20,9 +20,8 @@ def getPoints():
         arc = cv2.arcLength(cnt, True)
         angles = cv2.approxPolyDP(cnt, 0.033 * arc, True)
         x, y, w, h = cv2.boundingRect(angles)
-        if len(angles) > 4:
-            if abs(w - h) < 20:
-                points += 1
+        if len(angles) > 4 and abs(w - h) < 20:
+            points += 1
     pointsArg = {}
     pointsArg['points'] = str(points)
     return jsonify(pointsArg)
