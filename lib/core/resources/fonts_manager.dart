@@ -6,6 +6,7 @@ class FontsConstants {
 
 class FontSize {
   static const double s22 = 22;
+  static const double s24 = 24;
 }
 
 TextStyle _getTextStyle(

@@ -5,6 +5,7 @@ import '../../core/resources/string_manager.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/fonts_manager.dart';
 import '../../core/resources/values_manager.dart';
+import '../widgets/custom_dialog.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,7 +32,11 @@ class HomePage extends StatelessWidget {
                   margin: const EdgeInsets.all(AppMargin.m8),
                   padding: const EdgeInsets.all(AppPadding.p2),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (_) => const CustomDialog());
+                    },
                     style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll(ColorManager.primaryColor),
@@ -45,7 +50,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   width: 60.w,
-                  height: 8.h,
+                  height: 6.5.h,
                   margin: const EdgeInsets.all(AppMargin.m8),
                   padding: const EdgeInsets.all(AppPadding.p2),
                   child: ElevatedButton(
