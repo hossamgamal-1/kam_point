@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../core/resources/asset_path_manager.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/fonts_manager.dart';
 import '../../core/resources/string_manager.dart';
@@ -22,8 +23,17 @@ class GamePage extends StatelessWidget {
               alignment: Alignment.center,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(StringManager.gamePageImagePath),
+                  image: AssetImage(AssetsPathManager.gamePageImagePath),
                   fit: BoxFit.fitWidth,
+                ),
+              ),
+            ),
+            Container(
+              height: 71.5.h,
+              margin: EdgeInsets.only(top: 3.5.h),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(AssetsPathManager.gamePageDividerPath),
                 ),
               ),
             ),
@@ -41,7 +51,7 @@ class GamePage extends StatelessWidget {
                 children: [
                   CustomGameWinButton(
                     onPressed: () {},
-                    imagePath: StringManager.navCamIconPath,
+                    imagePath: AssetsPathManager.navCamIconPath,
                     text: Text(
                       StringManager.theyWin,
                       style: getRegularTextStyle(
@@ -54,7 +64,7 @@ class GamePage extends StatelessWidget {
                       backgroundColor:
                           MaterialStatePropertyAll(ColorManager.primaryColor),
                     ),
-                    imagePath: StringManager.whiteCamIconPath,
+                    imagePath: AssetsPathManager.whiteCamIconPath,
                     text: Text(
                       StringManager.weWin,
                       style: getRegularTextStyle(

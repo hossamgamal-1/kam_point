@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../core/resources/asset_path_manager.dart';
 import '../../core/resources/string_manager.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/fonts_manager.dart';
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            StringManager.backgroundImagePath,
+            AssetsPathManager.backgroundImagePath,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
