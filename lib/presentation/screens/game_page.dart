@@ -91,8 +91,8 @@ Widget getRow(String text1, String text2) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Text(text1, style: style),
         Text(text2, style: style),
+        Text(text1, style: style),
       ],
     ),
   );
