@@ -32,11 +32,9 @@ class HomePage extends StatelessWidget {
                   margin: const EdgeInsets.all(AppMargin.m8),
                   padding: const EdgeInsets.all(AppPadding.p2),
                   child: ElevatedButton(
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (_) => const CustomDialog());
-                    },
+                    onPressed: () => showDialog(
+                        context: context,
+                        builder: (context) => const CustomDialog()),
                     style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll(ColorManager.primaryColor),

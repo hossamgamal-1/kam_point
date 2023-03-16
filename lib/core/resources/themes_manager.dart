@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kam_point/core/resources/values_manager.dart';
+import 'values_manager.dart';
 
 import 'color_manager.dart';
 
 ThemeData getLightTheme() {
   return ThemeData(
     primaryColor: ColorManager.primaryColor,
+    appBarTheme: const AppBarTheme(
+      color: ColorManager.white,
+      foregroundColor: ColorManager.black,
+      elevation: AppSizes.s0,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: const MaterialStatePropertyAll(ColorManager.white),
