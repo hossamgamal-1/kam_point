@@ -28,6 +28,9 @@ flutter:
 
   assets:
     - assets/images/background.jpg
+    - assets/images/game_page_image.jpg
+    - assets/icons/camera_icon_white.png
+    - assets/icons/camera_icon_nav.png
 
   fonts:
     - family: Poppins

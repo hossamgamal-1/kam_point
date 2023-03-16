@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/resources/string_manager.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/fonts_manager.dart';
-import '../../core/resources/values_manager.dart';
 import '../widgets/custom_dialog.dart';
+import '../widgets/custom_elevated_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +13,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
           Image.asset(
@@ -26,58 +25,40 @@ class HomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 60.w,
-                  height: 6.5.h,
-                  margin: const EdgeInsets.all(AppMargin.m8),
-                  padding: const EdgeInsets.all(AppPadding.p2),
-                  child: ElevatedButton(
-                    onPressed: () => showDialog(
-                        context: context,
-                        builder: (context) => const CustomDialog()),
-                    style: const ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll(ColorManager.primaryColor),
-                    ),
-                    child: Text(
-                      StringManager.newRound,
-                      style: getSemiBoldTextStyle(
-                          color: ColorManager.white, fontSize: FontSize.s22),
+                CustomElevatedButton(
+                  onPressed: () => showDialog(
+                      context: context,
+                      builder: (context) => const CustomDialog()),
+                  style: const ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(ColorManager.primaryColor),
+                  ),
+                  child: Text(
+                    StringManager.newRound,
+                    style: getSemiBoldTextStyle(
+                        color: ColorManager.white, fontSize: FontSize.s4_4.sp),
+                  ),
+                ),
+                CustomElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    StringManager.currentRound,
+                    style: getSemiBoldTextStyle(
+                      color: ColorManager.primaryColor,
+                      fontSize: FontSize.s4_4.sp,
                     ),
                   ),
                 ),
-                Container(
-                  width: 60.w,
-                  height: 6.5.h,
-                  margin: const EdgeInsets.all(AppMargin.m8),
-                  padding: const EdgeInsets.all(AppPadding.p2),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      StringManager.currentRound,
-                      style: getSemiBoldTextStyle(
-                        color: ColorManager.primaryColor,
-                        fontSize: FontSize.s22,
-                      ),
+                CustomElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    StringManager.oldRounds,
+                    style: getSemiBoldTextStyle(
+                      color: ColorManager.primaryColor,
+                      fontSize: FontSize.s4_4.sp,
                     ),
                   ),
                 ),
-                Container(
-                  width: 60.w,
-                  height: 6.5.h,
-                  margin: const EdgeInsets.all(AppMargin.m8),
-                  padding: const EdgeInsets.all(AppPadding.p2),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      StringManager.oldRounds,
-                      style: getSemiBoldTextStyle(
-                        color: ColorManager.primaryColor,
-                        fontSize: FontSize.s22,
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
           ),

@@ -5,8 +5,10 @@ class FontsConstants {
 }
 
 class FontSize {
-  static const double s22 = 22;
-  static const double s24 = 24;
+  static const double s3_2 = 3.2;
+  static const double s4_4 = 4.4;
+  static const double s4_8 = 4.8;
+  static const double s16 = 16;
 }
 
 TextStyle _getTextStyle(
@@ -20,27 +22,32 @@ TextStyle _getTextStyle(
       fontWeight: fontWeight);
 }
 
-TextStyle getLightTextStyle({required Color color, double fontSize = 16}) {
+TextStyle getLightTextStyle(
+    {required Color color, double fontSize = FontSize.s16}) {
   return _getTextStyle(
       color: color, fontSize: fontSize, fontWeight: FontWeight.w300);
 }
 
-TextStyle getRegularTextStyle({required Color color, double fontSize = 16}) {
+TextStyle getRegularTextStyle(
+    {required Color color, double fontSize = FontSize.s16}) {
   return _getTextStyle(
       color: color, fontSize: fontSize, fontWeight: FontWeight.w400);
 }
 
-TextStyle getMediumTextStyle({required Color color, double fontSize = 16}) {
+TextStyle getMediumTextStyle(
+    {required Color color, double fontSize = FontSize.s16}) {
   return _getTextStyle(
       color: color, fontSize: fontSize, fontWeight: FontWeight.w500);
 }
 
-TextStyle getSemiBoldTextStyle({required Color color, double fontSize = 16}) {
+TextStyle getSemiBoldTextStyle(
+    {required Color color, double fontSize = FontSize.s16}) {
   return _getTextStyle(
       color: color, fontSize: fontSize, fontWeight: FontWeight.w600);
 }
 
-TextStyle getBoldTextStyle({required Color color, double fontSize = 16}) {
+TextStyle getBoldTextStyle(
+    {required Color color, double fontSize = FontSize.s16}) {
   return _getTextStyle(
       color: color, fontSize: fontSize, fontWeight: FontWeight.w700);
 }

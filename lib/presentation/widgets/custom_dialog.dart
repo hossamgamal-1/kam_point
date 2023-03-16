@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kam_point/app/app_router.dart';
-import '../../business_logic/count_type_cubit/count_type_cubit.dart';
 
 import '../../core/enums/enums.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/fonts_manager.dart';
 import '../../core/resources/string_manager.dart';
 import '../../core/resources/values_manager.dart';
+import '../../business_logic/count_type_cubit/count_type_cubit.dart';
 
 class CustomDialog extends StatelessWidget {
   const CustomDialog({super.key});
@@ -39,15 +39,17 @@ class CustomDialog extends StatelessWidget {
                 margin: const EdgeInsets.all(AppMargin.m8),
                 padding: const EdgeInsets.all(AppPadding.p2),
                 child: ElevatedButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, RoutesNames.gameRoute),
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, RoutesNames.gameRoute);
+                  },
                   style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll(ColorManager.primaryColor)),
                   child: Text(
                     StringManager.start,
                     style: getRegularTextStyle(
-                        color: ColorManager.white, fontSize: FontSize.s22),
+                        color: ColorManager.white, fontSize: FontSize.s4_4.sp),
                   ),
                 ),
               )
@@ -88,7 +90,7 @@ class CountType extends StatelessWidget {
             countString,
             style: getRegularTextStyle(
               color: isActive ? ColorManager.white : ColorManager.primaryColor,
-              fontSize: FontSize.s24,
+              fontSize: FontSize.s4_8.sp,
             ),
           ),
         ),
