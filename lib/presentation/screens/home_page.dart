@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kam_point/core/resources/color_manager.dart';
-import 'package:kam_point/core/resources/fonts_manager.dart';
-import 'package:kam_point/core/resources/values_manager.dart';
+
+import '../../core/resources/string_manager.dart';
+import '../../core/resources/color_manager.dart';
+import '../../core/resources/fonts_manager.dart';
+import '../../core/resources/values_manager.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,10 +12,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/background.jpg',
+            StringManager.backgroundImagePath,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -34,7 +37,7 @@ class HomePage extends StatelessWidget {
                           MaterialStatePropertyAll(ColorManager.primaryColor),
                     ),
                     child: Text(
-                      'فورة جديدة',
+                      StringManager.newRound,
                       style: getSemiBoldTextStyle(
                           color: ColorManager.white, fontSize: FontSize.s22),
                     ),
@@ -48,10 +51,11 @@ class HomePage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     child: Text(
-                      'فورة شغالة',
+                      StringManager.currentRound,
                       style: getSemiBoldTextStyle(
-                          color: ColorManager.primaryColor,
-                          fontSize: FontSize.s22),
+                        color: ColorManager.primaryColor,
+                        fontSize: FontSize.s22,
+                      ),
                     ),
                   ),
                 ),
@@ -63,10 +67,11 @@ class HomePage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     child: Text(
-                      'الفورات القديمة',
+                      StringManager.oldRounds,
                       style: getSemiBoldTextStyle(
-                          color: ColorManager.primaryColor,
-                          fontSize: FontSize.s22),
+                        color: ColorManager.primaryColor,
+                        fontSize: FontSize.s22,
+                      ),
                     ),
                   ),
                 )
@@ -75,7 +80,6 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.transparent,
     );
   }
 }
