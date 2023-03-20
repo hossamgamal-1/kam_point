@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../core/resources/string_manager.dart';
-import '../core/resources/themes_manager.dart';
+import '../presentation/resources/string_manager.dart';
+import '../presentation/resources/themes_manager.dart';
 import 'app_router.dart';
 
 class MyApp extends StatelessWidget {

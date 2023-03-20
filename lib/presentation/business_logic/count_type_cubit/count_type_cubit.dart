@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import '../../core/enums/enums.dart';
+import '../../../core/enums/enums.dart';
 // ignore: depend_on_referenced_packages
 import 'package:meta/meta.dart';
 

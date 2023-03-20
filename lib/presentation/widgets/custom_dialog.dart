@@ -4,11 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kam_point/app/app_router.dart';
 
 import '../../core/enums/enums.dart';
-import '../../core/resources/color_manager.dart';
-import '../../core/resources/fonts_manager.dart';
-import '../../core/resources/string_manager.dart';
-import '../../core/resources/values_manager.dart';
-import '../../business_logic/count_type_cubit/count_type_cubit.dart';
+import '../resources/color_manager.dart';
+import '../resources/fonts_manager.dart';
+import '../resources/string_manager.dart';
+import '../resources/values_manager.dart';
+import '../business_logic/count_type_cubit/count_type_cubit.dart';
 
 class CustomDialog extends StatelessWidget {
   const CustomDialog({super.key});

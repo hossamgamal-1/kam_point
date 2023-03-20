@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../core/resources/asset_path_manager.dart';
-import '../../core/resources/color_manager.dart';
-import '../../core/resources/fonts_manager.dart';
-import '../../core/resources/string_manager.dart';
+import '../resources/asset_path_manager.dart';
+import '../resources/color_manager.dart';
+import '../resources/fonts_manager.dart';
+import '../resources/string_manager.dart';
 import '../widgets/custom_game_win_button.dart';
 
 class GamePage extends StatelessWidget {
